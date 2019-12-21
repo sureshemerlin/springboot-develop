@@ -1,10 +1,9 @@
 pipeline {
-    agent { label 'deve' }
+    agent any
     stages {
         stage('build') {
             steps {
-                mvn clean compile
-                echo "mvn spring-boot:run"
+                sh 'mvn spring-boot:run'
             }
         }
     }
