@@ -1,9 +1,10 @@
 pipeline {
-    agent { label 'master' }
+    agent { label 'deve' }
     stages {
         stage('build') {
             steps {
-                echo "Hello World!"
+                //echo "Hello World!"
+                'mvn spring-boot:run'
             }
         }
     }
