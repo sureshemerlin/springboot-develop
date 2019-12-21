@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                //echo "Hello World!"
-                'mvn spring-boot:run'
+                mvn clean compile
+                echo "mvn spring-boot:run"
             }
         }
     }
