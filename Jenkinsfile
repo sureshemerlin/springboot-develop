@@ -4,6 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 bat 'mvn spring-boot:run'
+                echo "Application Started successfully...."
             }
         }
     }
