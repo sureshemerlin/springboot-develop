@@ -16,7 +16,7 @@ pipeline {
                 echo 'Deployment is successful'
             }
             failure {
-                echo 'Deployment is failed
+                echo 'Deployment is failed'
             }
             unstable {
                 echo 'This will run only if the run was marked as unstable'
