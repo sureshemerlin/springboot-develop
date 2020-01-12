@@ -9,4 +9,10 @@ class Person {
     String takeString(String message) {
         return " Returned from takestring............ ${message}"
     }
+
+    String checkOutFrom(input) {
+        print "Hello World  ${input}"
+        return "ffffffff"
+    }
+
 }

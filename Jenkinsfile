@@ -6,7 +6,7 @@ String checkOutFrom(input) {
         return "ffffffff"
     }
 
- 
+
 
 pipeline {
     agent any
@@ -14,14 +14,14 @@ pipeline {
     stages {
         stage('build') {
             steps {
-            def z = checkOutFrom("ddddddddddddddddddd")
+               checkOutFrom("ddddddddddddddddddd")
                 bat 'mvn spring-boot:run'
                 echo "Application Started successfully...."
             }
         }
         stage('purge') {
             steps {
-                def pipeline = checkOutFrom("uuuuuuuuuuuuuuu")
+                  checkOutFrom("uuuuuuuuuuuuuuu")
             }
         }
     }
