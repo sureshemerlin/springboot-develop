@@ -1,4 +1,4 @@
-import com.sample.Person
+@Library('z') import com.sample.Person
 
 pipeline {
     agent any
