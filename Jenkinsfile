@@ -3,10 +3,12 @@
 
 String checkOutFrom(input) {
         print "Hello World  ${input}"
+        return "ffffffff"
     }
 
 String checkOutFrom(input) {
         print "Hello World  ${input}"
+         return "ffffffff"
     }
 
 pipeline {
