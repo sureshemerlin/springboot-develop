@@ -5,6 +5,9 @@ def checkOutFrom(input) {
         print "Hello World  ${input}"
     }
 
+def checkOutFrom(input) {
+        print "Hello World  ${input}"
+    }
 
 pipeline {
     agent any
@@ -19,8 +22,7 @@ pipeline {
         }
         stage('purge') {
             steps {
-                def pipeline = new killOldBuilds()
-                pipeline.killOldBuilds()
+                def pipeline = checkOutFrom("uuuuuuuuuuuuuuu")
             }
         }
     }
