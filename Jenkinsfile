@@ -1,10 +1,19 @@
 pipeline {
     agent any
+
     stages {
         stage('build') {
             steps {
+            def z = new com.sample.Person()
+            z.checkOutFrom("ddddddddddddddddddd")
                 bat 'mvn spring-boot:run'
                 echo "Application Started successfully...."
+            }
+        }
+        stage('purge') {
+            steps {
+                def pipeline = new killOldBuilds()
+                pipeline.killOldBuilds()
             }
         }
     }

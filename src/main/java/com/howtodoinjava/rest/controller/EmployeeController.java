@@ -28,7 +28,13 @@ public class EmployeeController
     {
         return employeeDao.getAllEmployees();
     }
-    
+
+    @GetMapping(path="/{id}", produces = "application/json")
+    public String getEmployeesById()
+    {
+        return "{\"result\":\"not found\"}";
+    }
+
     @PostMapping(path= "/", consumes = "application/json", produces = "application/json")
     public ResponseEntity<Object> addEmployee(
                         @RequestHeader(name = "X-COM-PERSIST", required = true) String headerPersist,
