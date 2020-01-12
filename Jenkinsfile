@@ -1,11 +1,11 @@
 
 
 
-def checkOutFrom(input) {
+String checkOutFrom(input) {
         print "Hello World  ${input}"
     }
 
-def checkOutFrom(input) {
+String checkOutFrom(input) {
         print "Hello World  ${input}"
     }
 
