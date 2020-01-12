@@ -1,3 +1,5 @@
+import com.sample.Person
+
 pipeline {
     agent any
 
