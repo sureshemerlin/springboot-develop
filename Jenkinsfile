@@ -6,10 +6,7 @@ String checkOutFrom(input) {
         return "ffffffff"
     }
 
-String checkOutFrom(input) {
-        print "Hello World  ${input}"
-         return "ffffffff"
-    }
+ 
 
 pipeline {
     agent any
