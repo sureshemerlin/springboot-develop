@@ -1,4 +1,4 @@
-@Library('person@develop')
+@Library('groovy/person@develop')
 import com.sample.Person
 pipeline {
     agent any
