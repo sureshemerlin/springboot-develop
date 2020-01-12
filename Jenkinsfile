@@ -1,13 +1,18 @@
-@Library('groovy/person@develop')
-import com.sample.Person
+
+
+
+def checkOutFrom(input) {
+        print "Hello World  ${input}"
+    }
+
+
 pipeline {
     agent any
 
     stages {
         stage('build') {
             steps {
-            def z = new com.sample.Person()
-            z.checkOutFrom("ddddddddddddddddddd")
+            def z = checkOutFrom("ddddddddddddddddddd")
                 bat 'mvn spring-boot:run'
                 echo "Application Started successfully...."
             }
