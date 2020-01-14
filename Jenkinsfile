@@ -12,9 +12,24 @@ pipeline {
     agent any
 
     stages {
+     stage('Jacoco code coverage') {
+                             steps {
+                                checkOutFrom("Jacoco code coverage")
+                                 bat 'mvn test'
+                                 echo "Application Started successfully...."
+                             }
+                         }
+
+        stage('sonarscan') {
+                     steps {
+                         checkOutFrom("sonarscan")
+                         bat 'mvn test sonar:sonar'
+                        echo "Application Started successfully...."
+                                         }
+                                     }
         stage('build') {
             steps {
-               checkOutFrom("ddddddddddddddddddd")
+               checkOutFrom("build")
                 bat 'mvn spring-boot:run'
                 echo "Application Started successfully...."
             }
