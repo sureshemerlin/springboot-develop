@@ -39,16 +39,20 @@
 		<groupId>org.jacoco</groupId>
 		<artifactId>jacoco-maven-plugin</artifactId>
 		<version>0.8.5</version>
-	</dependency> </dependencies>
-
-
-
-
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/junit/junit -->
+	<dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+		<version>4.13</version>
+		<scope>test</scope>
+	</dependency>
+	</dependencies>
 <!--	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId> 
+				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
 				<groupId>io.fabric8</groupId>
