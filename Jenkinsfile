@@ -39,8 +39,7 @@ pipeline {
            stage('deployment') {
                     steps {
                      bat 'echo The current directory is %CD%'
-                       bat 'cd target'
-                        bat 'java -jar springbootdemo-0.0.1-SNAPSHOT.jar'
+                        bat 'java -jar ./target/springbootdemo-0.0.1-SNAPSHOT.jar'
                         // bat 'mvn clean spring-boot:run'
                         echo "Application Started successfully...."
                     }
