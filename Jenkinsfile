@@ -13,8 +13,7 @@ pipeline {
 
  environment {
     //Use Pipeline Utility Steps plugin to read information from pom.xml into env variables
-    POM_ARTIFACTID = readMavenPom().getArtifactId()
-    POM_VERSION = readMavenPom().getVersion()
+
     }
     stages {
      stage('Jacoco code coverage') {
@@ -45,7 +44,7 @@ pipeline {
                     steps {
                      bat 'echo The current directory is %CD%'
                        bat 'cd target'
-                       bat 'java -jar ${POM_ARTIFACTID}-${POM_VERSION}.jar'
+                       bat 'java -jar springbootdemo-0.0.1-SNAPSHOT.jar'
                         // bat 'mvn clean spring-boot:run'
                         echo "Application Started successfully...."
                     }
