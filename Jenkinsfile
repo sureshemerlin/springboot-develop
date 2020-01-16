@@ -30,10 +30,20 @@ pipeline {
         stage('build') {
             steps {
                checkOutFrom("build")
-                bat 'mvn spring-boot:run'
+               bat 'mvn clean package'
+                // bat 'mvn clean spring-boot:run'
                 echo "Application Started successfully...."
             }
         }
+
+           stage('deploy') {
+                    steps {
+                     bat 'echo The current directory is %CD%'
+                       bat 'mvn clean package'
+                        // bat 'mvn clean spring-boot:run'
+                        echo "Application Started successfully...."
+                    }
+                }
         stage('purge') {
             steps {
                   checkOutFrom("uuuuuuuuuuuuuuu")
