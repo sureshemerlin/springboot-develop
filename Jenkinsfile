@@ -36,10 +36,11 @@ pipeline {
             }
         }
 
-           stage('deploy') {
+           stage('deployment') {
                     steps {
                      bat 'echo The current directory is %CD%'
-                       bat 'mvn clean package'
+                       bat 'cd target'
+                       bat 'java -jar $POM_ARTIFACTID-$POM_VERSION.jar'
                         // bat 'mvn clean spring-boot:run'
                         echo "Application Started successfully...."
                     }
