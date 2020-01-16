@@ -11,10 +11,6 @@ String checkOutFrom(input) {
 pipeline {
     agent any
 
- environment {
-    //Use Pipeline Utility Steps plugin to read information from pom.xml into env variables
-
-    }
     stages {
      stage('Jacoco code coverage') {
                              steps {
@@ -44,7 +40,7 @@ pipeline {
                     steps {
                      bat 'echo The current directory is %CD%'
                        bat 'cd target'
-                       bat 'java -jar springbootdemo-0.0.1-SNAPSHOT.jar'
+                        bat 'java -jar springbootdemo-0.0.1-SNAPSHOT.jar'
                         // bat 'mvn clean spring-boot:run'
                         echo "Application Started successfully...."
                     }
